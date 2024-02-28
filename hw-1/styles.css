@@ -1,0 +1,184 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+}
+
+.header,
+.navbar,
+.hero,
+.about,
+.footer {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 20;
+}
+
+.navbar {
+    position: relative;
+    z-index: 20;
+    background: #333;
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero {
+    color: #fff;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+}
+
+.about {
+    position: relative;
+    z-index: 15;
+    padding: 50px 20px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.image-1 {
+    background-image: url("parallax-background-1.webp");
+}
+
+.image-2 {
+    background-image: url("parallax-background-2.webp");
+}
+
+.image-3 {
+    background-image: url("parallax-background-3.webp");
+}
+
+/* Parallax Effect */
+.parallax {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax::before {
+    content: "";
+    position: absolute;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* User Comments Section */
+.user-comments {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment {
+    min-width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-photo {
+    border-radius: 50%;
+    background-size: cover;
+    object-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+a {
+    cursor: pointer;
+}
+
+a:visited {
+    color: #fff;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.user-name {
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+
+.comment-text {
+    font-weight: light;
+    color: #000;
+    font-size: 14px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 20;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.btn {
+    display: inline-block;
+    background: #000;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+@media (max-width: 768px) {
+    .hero-text,
+    .about {
+        padding: 20px;
+    }
+}
